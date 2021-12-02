@@ -1,0 +1,6 @@
+---
+- name: Enable RTPproxy service
+  service:
+    name: "rtpproxy.service"
+    daemon_reload: yes
+    enabled: yes
