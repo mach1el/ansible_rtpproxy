@@ -1,0 +1,9 @@
+---
+- import_tasks: setup_debian.yaml
+  when: ansible_os_family == 'Debian'
+
+- include_tasks: setup_bcg.yaml
+
+- include_tasks: setup_rtpproxy.yaml
+
+- include_tasks: create_service.yaml

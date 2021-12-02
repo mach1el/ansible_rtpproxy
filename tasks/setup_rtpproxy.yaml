@@ -1,0 +1,25 @@
+---
+- name: rtpproxy | Ensure build folder not exist.
+  file:
+    path: "{{ rtpproxy_working_dir }}/rtpproxy"
+    state: absent
+
+- name: rtpproxy | Clone source
+  shell: git clone {{ rtpproxy_github_repo }}
+  args:
+    chdir: "{{ rtpproxy_working_dir }}"
+
+- name: rtpproxy | Update submodule.
+  shell: git -C rtpproxy submodule update --init --recursive
+  args:
+    chdir: "{{ rtpproxy_working_dir }}"
+
+- name: rtpproxy | ./Configure.
+  shell: sh configure
+  args:
+    chdir: "{{ rtpproxy_working_dir }}"
+
+- name: rtpproxy | make && make install.
+  shell: make && make install
+  args:
+    chdir: "{{ rtpproxy_working_dir }}"
