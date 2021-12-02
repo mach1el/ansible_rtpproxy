@@ -9,18 +9,19 @@ See [`default/main.yml`](https://github.com/mach1el/ansible-role-rtpproxy/blob/m
 ## Role pathes
 
     ├── defaults
-    │   └── main.yml
+    │   └── main.yaml
     ├── handlers
-    │   └── main.yml
+    │   └── main.yaml
+    ├── LICENSE
+    ├── README.md
     ├── tasks
-    │   ├── configure.yml
-    │   ├── main.yml
-    │   ├── setup_bcg.yml
-    │   ├── setup_debian.yml
-    │   └── setup_rtpengine.yml
+    │   ├── create_service.yaml
+    │   ├── main.yaml
+    │   ├── setup_bcg.yaml
+    │   ├── setup_debian.yaml
+    │   └── setup_rtpproxy.yaml
     └── templates
-        ├── rtpengine.conf.j2
-        └── rtpengine-recording.conf.j2
+        └── rtpproxy.service
 
 ## Example playbook
 
