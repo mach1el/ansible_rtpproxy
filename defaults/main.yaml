@@ -1,0 +1,47 @@
+---
+rtpproxy_templates_dir: "../templates/"
+rtpproxy_working_dir: "/tmp"
+rtpproxy_spool_dir: "/var/spool/rtpproxy"
+rtpproxy_output_dir: "/var/lib/rtpproxy-recording"
+
+rtpengine_bcg_version: "1.0.4"
+rtpengine_bcg_repo: "https://github.com/ossobv/bcg729-deb.git"
+rtpengine_bcg_build_dir: "{{ rtpproxy_working_dir }}/bcg729-{{ rtpproxy_bcg_version }}"
+
+
+rtpproxy_packages:
+  - curl
+  - git
+  - debhelper
+  - default-libmysqlclient-dev
+  - gperf 
+  - iptables-dev
+  - libavcodec-dev
+  - libavfilter-dev
+  - libavformat-dev
+  - libavutil-dev
+  - libbencode-perl
+  - libcrypt-openssl-rsa-perl
+  - libcrypt-rijndael-perl
+  - libhiredis-dev
+  - libio-multiplex-perl
+  - libio-socket-inet6-perl
+  - libjson-glib-dev
+  - libdigest-crc-perl
+  - libdigest-hmac-perl
+  - libnet-interface-perl
+  - libnet-interface-perl
+  - libssl-dev
+  - libsystemd-dev
+  - libxmlrpc-core-c3-dev
+  - libcurl4-openssl-dev
+  - libevent-dev
+  - libpcap0.8-dev
+  - markdown
+  - unzip
+  - nfs-common
+  - dkms 
+  - libspandsp-dev
+  - libsndfile1 
+  - tcpdump 
+  - libsndfile1-dev
