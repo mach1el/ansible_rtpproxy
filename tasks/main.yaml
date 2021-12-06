@@ -1,4 +1,15 @@
 ---
+- name: Create rtpproxy folders.
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: root
+    group: root
+    mode: 0775
+  loop:
+    - /var/lib/rtpproxy-recording
+    - /var/spool/rtpproxy
+
 - import_tasks: setup_debian.yaml
   when: ansible_os_family == 'Debian'
 
