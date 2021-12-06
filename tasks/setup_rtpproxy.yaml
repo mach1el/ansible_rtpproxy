@@ -17,9 +17,9 @@
 - name: rtpproxy | ./Configure.
   shell: sh configure
   args:
-    chdir: "{{ rtpproxy_working_dir }}"
+    chdir: "{{ rtpproxy_working_dir }}/rtpproxy"
 
 - name: rtpproxy | make && make install.
   shell: make && make install
   args:
-    chdir: "{{ rtpproxy_working_dir }}"
+    chdir: "{{ rtpproxy_working_dir }}/rtpproxy"
