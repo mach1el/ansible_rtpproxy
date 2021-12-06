@@ -15,7 +15,6 @@ rtpproxy_packages:
   - debhelper
   - default-libmysqlclient-dev
   - gperf 
-  - iptables-dev
   - libavcodec-dev
   - libavfilter-dev
   - libavformat-dev
