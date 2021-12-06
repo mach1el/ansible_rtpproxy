@@ -4,9 +4,9 @@ rtpproxy_working_dir: "/tmp"
 rtpproxy_spool_dir: "/var/spool/rtpproxy"
 rtpproxy_output_dir: "/var/lib/rtpproxy-recording"
 
-rtpengine_bcg_version: "1.0.4"
-rtpengine_bcg_repo: "https://github.com/ossobv/bcg729-deb.git"
-rtpengine_bcg_build_dir: "{{ rtpproxy_working_dir }}/bcg729-{{ rtpproxy_bcg_version }}"
+rtpproxy_bcg_version: "1.0.4"
+rtpproxy_bcg_repo: "https://github.com/ossobv/bcg729-deb.git"
+rtpproxy_bcg_build_dir: "{{ rtpproxy_working_dir }}/bcg729-{{ rtpproxy_bcg_version }}"
 
 
 rtpproxy_packages:

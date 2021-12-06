@@ -1,7 +1,7 @@
 ---
 - name: Ensure bcg build folder not exist.
   file:
-    path: "{{ rtpengine_bcg_build_dir }}"
+    path: "{{ rtpproxy_bcg_build_dir }}"
     state: absent
 
 - name: Curl | get source file.

@@ -2,7 +2,7 @@
 
 - name: rtpproxy | Create systemd service.
   template:
-    src: "{{ rtpengine_templates_dir }}/rtpproxy.service"
+    src: "{{ rtpproxy_templates_dir }}/rtpproxy.service"
     dest: "/etc/systemd/system/rtpproxy.service"
   notify:
     - Enable RTPproxy service
