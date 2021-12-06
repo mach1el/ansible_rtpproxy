@@ -8,6 +8,7 @@ rtpproxy_bcg_version: "1.0.4"
 rtpproxy_bcg_repo: "https://github.com/ossobv/bcg729-deb.git"
 rtpproxy_bcg_build_dir: "{{ rtpproxy_working_dir }}/bcg729-{{ rtpproxy_bcg_version }}"
 
+rtpproxy_github_repo: "https://github.com/sippy/rtpproxy.git"
 
 rtpproxy_packages:
   - curl
