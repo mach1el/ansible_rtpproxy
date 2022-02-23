@@ -6,12 +6,10 @@ Requires=network.target
 [Service]
 Type=simple
 PIDFile=/var/run/rtpproxy/rtpproxy.pid
-#Environment='OPTIONS= -l 0.0.0.0 -s udp:10.10.99.130 7890 -s udp:10.254.222.122 7890 -F -L 500000 -m 10000 -M 60000 -d INFO LOG_LOCAL5'
-
 Restart=always
 RestartSec=5
 
-ExecStart=/usr/local/bin/rtpproxy -l 0.0.0.0 -s udp:0.0.0.0:7891 -RFf -L 600000 -m 10000 -M 60000 -d INFO:LOG_LOCAL5 -r /var/lib/rtpproxy-recording -S /var/spool/rtpproxy
+ExecStart=/usr/local/bin/rtpproxy -l 0.0.0.0 -s udp:*:7891 -RFf -L 600000 -m 10000 -M 60000 -d INFO:LOG_LOCAL5 -r /var/lib/rtpproxy-recording -S /var/spool/rtpproxy
 ExecStop=/usr/bin/pkill -F /var/run/rtpproxy/rtpproxy.pid
 
 StandardOutput=syslog
