@@ -5,4 +5,4 @@
     src: "{{ rtpproxy_templates_dir }}/rtpproxy.service"
     dest: "/etc/systemd/system/rtpproxy.service"
   notify:
-    - Enable RTPproxy service
+    - Enable rtpproxy service
