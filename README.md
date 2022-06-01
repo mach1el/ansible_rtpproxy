@@ -30,4 +30,5 @@ See [`default/main.yml`](https://github.com/mach1el/ansible-role-rtpproxy/blob/m
       hosts: local_server
       become: true
      
-      roles: - '../ansible-role-rtpproxy'
+      roles: 
+        - '../ansible-role-rtpproxy'
