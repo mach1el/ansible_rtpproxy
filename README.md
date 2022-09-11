@@ -8,27 +8,30 @@ See [`default/main.yml`](https://github.com/mach1el/ansible-role-rtpproxy/blob/m
 
 ## Role pathes
 
-    ├── defaults
-    │   └── main.yaml
-    ├── handlers
-    │   └── main.yaml
-    ├── LICENSE
-    ├── README.md
-    ├── tasks
-    │   ├── create_service.yaml
-    │   ├── main.yaml
-    │   ├── setup_bcg.yaml
-    │   ├── setup_debian.yaml
-    │   └── setup_rtpproxy.yaml
-    └── templates
-        └── rtpproxy.service
+```
+├── defaults
+│   └── main.yaml
+├── handlers
+│   └── main.yaml
+├── LICENSE
+├── README.md
+├── tasks
+│   ├── create_service.yaml
+│   ├── main.yaml
+│   ├── setup_bcg.yaml
+│   ├── setup_debian.yaml
+│   └── setup_rtpproxy.yaml
+└── templates
+    └── rtpproxy.service
+```
 
 ## Example playbook
 
-    ---
-    - name: Building rtpengine for local server
-      hosts: local_server
-      become: true
-     
-      roles: 
-        - '../ansible-role-rtpproxy'
+```
+---
+- name: Building rtpengine for local server
+  hosts: all
+  become: true
+  roles: 
+    - 'mach1el.ansible_rtpproxy'
+```
